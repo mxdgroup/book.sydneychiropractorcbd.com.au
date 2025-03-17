@@ -1,0 +1,68 @@
+---
+import TeamPerson from "./TeamPerson.astro";
+import PrimaryButton from "../reusable/PrimaryButton.astro";
+
+interface TeamPersonDetails {
+    name: string;
+    role: string;
+    about: string[];
+    index: number;
+}
+
+const { person, index } = Astro.props;
+---
+<div class="team-person-more">
+    {index % 2 === 0 ? (
+        <div class="left-section">
+            <TeamPerson person={person} />
+        </div>
+    ) : <></>}
+    <div class="right-section">
+        <h2 style={`text-align: ${index % 2 === 0 ? "left" : "right"}`}>Meet {person.name.replace("Dr. ", "")}</h2>
+        {person.about.map((paragraph: string) => (
+            <p>{paragraph}</p>
+        ))}
+        <div class="button-container" style={`align-self: ${index % 2 === 0 ? "flex-start" : "flex-end"}`}>
+            <PrimaryButton text="Get in Touch With Us" />
+        </div>
+    </div>
+    {index % 2 === 0 ? <></> : (
+        <div class="left-section">
+            <TeamPerson person={person} />
+        </div>
+    )}
+</div>
+
+<style>
+    .team-person-more {
+        display: flex;
+        gap: 4rem;
+        align-items: flex-start;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .right-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 20px;
+        margin: 0;
+        color: #333;
+    }
+
+    .button-container {
+        width: 40%;
+    }
+</style>

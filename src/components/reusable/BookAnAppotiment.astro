@@ -1,0 +1,60 @@
+---
+---
+<div class="book-an-appointment-container">
+    <div class="book-an-appointment-header">
+        <img src="/person.png" alt="person" />
+        <h1>Book an appointment</h1>    
+    </div>
+    <div class="button-container">
+        <button class="existing-client">I AM AN EXISTING CLIENT</button>
+        <button class="new-client">I AM A NEW CLIENT</button>
+    </div>
+</div>
+<style>
+    .book-an-appointment-container{
+        padding: 1rem 0;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .book-an-appointment-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    .book-an-appointment-header img{
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--purple);
+        margin-top: 1rem;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+    button{
+        background-color: white;
+        color: var(--purple);
+        padding: 0.5rem 1rem;
+        border:1px solid var(--purple);
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: var(--purple);
+        color: white;
+    }
+</style>

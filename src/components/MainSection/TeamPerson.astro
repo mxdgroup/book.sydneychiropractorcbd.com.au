@@ -1,0 +1,39 @@
+---
+interface TeamPerson {
+    name: string;
+    role: string;
+    image: string;
+}
+const { person } = Astro.props;
+---
+<div class="team-person">
+    <img src={person.image} alt={person.name} class="team-person-image" />
+    <p class="team-person-name">{person.name}</p>
+    <p class="team-person-title">{person.role}</p>
+</div>
+<style>
+    .team-person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .team-person-name {
+        color: var(--primary-blue);
+        font-weight: 600;
+        margin: 0.5rem 0 0 0;
+    }
+    .team-person-title {
+        font-size: 1rem;
+        margin: 0;
+        color: #333;
+    }
+    img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+</style>

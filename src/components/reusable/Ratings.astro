@@ -1,0 +1,64 @@
+---
+interface Props {
+    blackText?: boolean;
+}
+
+const { blackText = false }: Props = Astro.props;
+---
+<div class="rating" style={blackText ? "color: black;" : "color: white;"}>
+    <img src="/google.png" alt="Google" class="google-logo" />
+    <div class="rating-content">
+        <div class="rating-stars">
+          <span class="rating-number">4.9</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <a href="#reviews" class="review-link" style={blackText ? "color: black;" : "color: white;"}>Read our 173 reviews</a>
+    </div>
+</div>
+<style>
+    img{
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+    }
+
+      .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .google-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .rating-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .rating-number {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .stars {
+    color: #FFD700;
+    font-size: 1rem;
+  }
+
+  .review-link {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,75 @@
+---
+import PrimaryButton from './reusable/PrimaryButton.astro';
+---
+<header class="header">
+  <div class="container">
+      <div class="header-content">
+      <img src="/clinic27.webp"/>
+      <PrimaryButton text="Give Us a Call (02) 8059 7743" />
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: white;
+  }
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    text-decoration: none;
+  }
+
+  .logo-circle {
+    background: var(--primary-blue);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  .clinic {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .number {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+    }
+
+    .clinic {
+      font-size: 0.8rem;
+    }
+
+    .number {
+      font-size: 1.2rem;
+    }
+
+    .call-button {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+</style> 

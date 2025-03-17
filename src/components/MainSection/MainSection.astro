@@ -1,0 +1,65 @@
+---
+import UnderlineHeader from "../reusable/UnderlineHeader.astro";
+import YoutubeVideo from "../reusable/YoutubeVideo.astro";
+import BookAnAppotiment from "../reusable/BookAnAppotiment.astro";
+import PrimaryButton from "../reusable/PrimaryButton.astro";
+import Team from "./Team.astro";
+import Reviews from "./Reviews.astro";
+import Ratings from "../reusable/Ratings.astro";
+---
+<section class="main-section">
+    <UnderlineHeader text="A quick walkthrough" />
+    <div style="width:40%">
+    <YoutubeVideo videoId="KehQPtPov_0" fullWidth/>
+
+    </div>
+    <BookAnAppotiment />
+    <UnderlineHeader text="What out clients say"/>
+    <span style="font-weight: 600; font-size: 13px; color: rgb(74, 74, 74); background-color: rgba(0, 0, 0, 0); width:20%; text-align: center;">
+        Join So Many of Our Satisfied Clients Find out why our clients keep coming back.
+    </span>
+    <Reviews />
+    <Ratings blackText />
+    <PrimaryButton text="Call us to book an appointment" />
+    <Team />
+    <UnderlineHeader text="How can you find us?" />
+    <div class="map-container">
+        <h1 style="color: white;font-size: 2rem; font-weight: 600; z-index: 1;">Need Help?</h1>
+        <PrimaryButton text="contact us for more information" />
+        <div class="overlay"></div>
+    </div>
+</section>
+<style>
+    .main-section {
+        margin: 3rem auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .map-container {
+        width: 70%;
+        height: 400px;
+        background-image: url("/map.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 5rem;
+        gap: 2rem;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+    }
+</style>
