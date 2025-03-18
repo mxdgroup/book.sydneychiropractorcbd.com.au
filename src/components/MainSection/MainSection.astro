@@ -28,7 +28,9 @@ import Ratings from "../reusable/Ratings.astro";
     <UnderlineHeader text="How can you find us?" />
     <div class="map-container">
         <h1 style="color: white;font-size: 2rem; font-weight: 600; z-index: 1;">Need Help?</h1>
-        <PrimaryButton text="contact us for more information" href="tel:0280597743"/>
+        <div class="button-container">
+            <PrimaryButton text="contact us for more information" href="tel:0280597743"/>
+        </div>
         <div class="overlay"></div>
     </div>
 </section>
@@ -87,7 +89,7 @@ import Ratings from "../reusable/Ratings.astro";
             width: 80%;
         }
         .map-container {
-            width: 80%;
+            width: 90%;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -103,6 +105,13 @@ import Ratings from "../reusable/Ratings.astro";
         }
         .video-container {
             width: 80%;
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            margin-top: 2rem;   
+            width: 100%;
         }
     }
 </style>
