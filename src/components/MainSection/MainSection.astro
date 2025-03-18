@@ -20,12 +20,12 @@ import Ratings from "../reusable/Ratings.astro";
     </span>
     <Reviews />
     <Ratings blackText />
-    <PrimaryButton text="Call us to book an appointment" />
+    <PrimaryButton text="Call us to book an appointment" href="tel:0280597743"/>
     <Team />
     <UnderlineHeader text="How can you find us?" />
     <div class="map-container">
         <h1 style="color: white;font-size: 2rem; font-weight: 600; z-index: 1;">Need Help?</h1>
-        <PrimaryButton text="contact us for more information" />
+        <PrimaryButton text="contact us for more information" href="tel:0280597743"/>
         <div class="overlay"></div>
     </div>
 </section>
@@ -43,7 +43,7 @@ import Ratings from "../reusable/Ratings.astro";
         width: 70%;
         height: 400px;
         background-image: url("/map.png");
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         position: relative;

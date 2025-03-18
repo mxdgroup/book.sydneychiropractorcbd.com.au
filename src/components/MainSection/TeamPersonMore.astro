@@ -23,7 +23,7 @@ const { person, index } = Astro.props;
             <p>{paragraph}</p>
         ))}
         <div class="button-container" style={`align-self: ${index % 2 === 0 ? "flex-start" : "flex-end"}`}>
-            <PrimaryButton text="Get in Touch With Us" />
+            <PrimaryButton text="Get in Touch With Us" href="tel:0280597743"    />
         </div>
     </div>
     {index % 2 === 0 ? <></> : (

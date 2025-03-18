@@ -8,7 +8,7 @@ const { text, href } = Astro.props;
 ---
 {
     href ? (
-        <a href={href} class="primary-button">
+        <a href="tel:0280597743" target="_blank" class="primary-button">
             {text}
         </a>
     ) : (
@@ -31,9 +31,9 @@ const { text, href } = Astro.props;
         cursor: pointer;
         text-transform: capitalize;
         z-index: 1;
+        position: relative;
     }
-
     .primary-button:hover {
-        opacity: 1.2;
+        background: rgb(181, 48, 94);
     }
 </style>
