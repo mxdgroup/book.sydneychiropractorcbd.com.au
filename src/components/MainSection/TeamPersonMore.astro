@@ -106,8 +106,14 @@ const { person, index } = Astro.props;
     .button-container {
         width: 40%;
     }
+
+    @media (max-width: 1200px) {
+        .button-container {
+            width: 100%;
+        }
+    }
     
-    @media (max-width: 480px) {
+    @media (max-width: 900px) {
         .team-person-more {
             flex-direction: column;
             align-items: center;

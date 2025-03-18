@@ -11,7 +11,7 @@ import UnderlineHeader from './reusable/UnderlineHeader.astro';
             <ParagraphWithHeader text="Experience relief from back and spine pain, including issues like lower back degeneration in the lumbar region. Our treatment improves mobility, reduces discomfort, and supports greater physical activity. We treat even challenging cases and difficult adjustments." header="Back and spine pain"/>
             <ParagraphWithHeader text="Improved posture can lead to your better overall health, increased energy, and reduced strain on the body. Our treatments focus on correcting posture-related imbalances, helping you achieve proper alignment and prevent long-term complications." header="All posture related problems"/>
         </div>
-        <YoutubeVideo videoId="n2hiC9-gGTI" fullWidth />
+        <YoutubeVideo videoId="https://www.youtube.com/embed/n2hiC9-gGTI?si=VNkyQAZ1lG5Sz-Q6" fullWidth />
     </div>
     <div class="primary-button-wrapper">
         <PrimaryButton text="Get in touch with the experts" href="tel:0280597743" centerText={true}/>
@@ -34,7 +34,7 @@ import UnderlineHeader from './reusable/UnderlineHeader.astro';
             <ParagraphWithHeader blackText header="The Clinic Owner is a Published Author" text="Dr. Hooman Zahedi is a published author whose book has earned a 5-star rating on Amazon. Known for his straightforward approach, he shares valuable insights into chiropractic care and health, reflecting his dedication to empowering patients with knowledge and effective solutions."/>
         </div>
         <div class="bottom-video-section">
-            <YoutubeVideo videoId="XvYeHDnvfPw" fullWidth />
+            <YoutubeVideo videoId="https://www.youtube.com/embed/XvYeHDnvfPw?si=vCmk0R19H5aEULgS" fullWidth />
             <div class="bottom-button-wrapper">
                 <PrimaryButton text="Call us to book an appointment" href="tel:0280597743" centerText={true} />
             </div>
@@ -120,16 +120,8 @@ import UnderlineHeader from './reusable/UnderlineHeader.astro';
         align-items: center;
     }
     
-    @media (max-width: 768px) {
-        .top-section, 
-        .mid-section,
-        .bottom-section {
-            max-width: 90%;
-            gap: 1.5rem;
-        }
-    }
     
-    @media (max-width: 480px) {
+    @media (max-width: 900px) {
         .sales-pitch {
             padding: 4rem;
             padding-top: 8rem;

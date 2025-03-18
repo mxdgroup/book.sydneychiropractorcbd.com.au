@@ -7,7 +7,7 @@ interface Props {
 const { videoId, fullWidth = false }: Props = Astro.props;
 ---
 <div class="youtube-video-container" style={`width: ${fullWidth ? '100%' : '50%'}; border:0;`}>
-    <iframe src={`https://www.youtube.com/embed/${videoId}`} allow="picture-in-picture" allowfullscreen></iframe>
+    <iframe  src={videoId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <style>
     .youtube-video-container{
