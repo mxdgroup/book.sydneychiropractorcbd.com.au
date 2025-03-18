@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import clinicLogo from '/public/logo/clinic27.webp';
 import PrimaryButton from './reusable/PrimaryButton.astro';
 ---
 <footer>
     <div class="footer-container">
+        <div class="overlay"></div>
         <div class="footer-content">
-            <div class="logo-circle">
-            </div>
+            <Image src={clinicLogo} alt="Clinic Logo" loading="eager"/>
             <p class="footer-text">
                 Get in touch with us and find out why
                 so many patients stay with us for years
@@ -18,8 +20,17 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
     </div>
 </footer>
 <style>
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
     .footer-container{
-        background-image: url('/footer_bg.png');
+        background-image: url('/footer_bg.jpg');
         background-size: cover;
         background-position: center;
         display: flex;
@@ -29,6 +40,7 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         height: auto;
         padding: 3rem 1rem;
         width: 100%;
+        position: relative;
     }
     
     .footer-content {
@@ -40,6 +52,8 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         width: 100%;
         max-width: 1200px;
         text-align: center;
+        position: relative;
+        z-index: 2;
     }
        
     .footer-text{
@@ -58,6 +72,15 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         margin: 0 auto;
     }
 
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
     /* Large screens */
     @media (min-width: 1200px) {
         .footer-container {
@@ -69,6 +92,10 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         .footer-text {
             width: 30%;
             font-size: 1.2rem;
+        }
+        img {
+            width: 150px;
+            height: 150px;
         }
     }
 
@@ -83,6 +110,10 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         .footer-text {
             width: 50%;
             font-size: 1.1rem;
+        }
+        img {
+            width: 120px;
+            height: 120px;
         }
     }
 
@@ -115,6 +146,34 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
         .footer-text{
             width: 85%;
             font-size: 0.9rem;
+        }
+    }
+
+    @media (max-height: 768px) {
+        .footer-container{
+            height: 60vh;
+        }
+        .footer-text{
+            width: 85%;
+            font-size: 0.6rem;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @media (max-height: 400px) {
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media (max-height: 300px) {
+        img {
+            width: 40px;
+            height: 40px;
         }
     }
 </style>

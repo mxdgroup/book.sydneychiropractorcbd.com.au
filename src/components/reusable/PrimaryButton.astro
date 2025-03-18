@@ -44,4 +44,20 @@ const { text, href, centerText } = Astro.props;
             width: 100%;
         }
     }
+
+    @media (max-height: 768px) {
+        .primary-button {
+            font-size: 0.6rem;
+            width: 60%;
+            height: fit-content;
+        }
+    }
+
+    @media (max-height: 400px) {
+        .primary-button {
+            font-size: 0.4rem;
+            width: 60%;
+            height: fit-content;
+        }
+    }
 </style>
