@@ -23,7 +23,7 @@ const { person } = Astro.props;
         width: 100%;
     }
     .team-person-name {
-        color: var(--primary-blue);
+        color: var(--purple);
         font-weight: 600;
         margin: 0.5rem 0 0 0;
     }
@@ -37,4 +37,15 @@ const { person } = Astro.props;
         height: 250px;
         object-fit: contain;
     }
+    @media (max-width: 480px) {
+        .team-person-name {
+            font-size: 1.2rem;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+    }
+
 </style>

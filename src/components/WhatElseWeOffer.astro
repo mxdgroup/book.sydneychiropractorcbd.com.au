@@ -28,8 +28,8 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
             <p class="what-else-we-offer-item-paragraph">Offering both male and female chiropractors allows you to select a healthcare professional you're most comfortable with.</p>
         </div>
     </div>
-    <div style="display: flex; justify-content: center; margin:0 auto; margin-top: 2rem;">
-        <PrimaryButton text="Call us at (02) 9267 3333" href="tel:0292673333" />
+    <div class="button-container">
+        <PrimaryButton text="Call us at (02) 9267 3333" href="tel:0292673333" centerText={true}/>
     </div>
 
 </section>
@@ -79,5 +79,37 @@ import PrimaryButton from './reusable/PrimaryButton.astro';
     
     .icon {
         color: #4a5568;
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        margin:0 auto;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        .what-else-we-offer-container{
+            flex-direction: column;
+            text-align: center;
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            margin-top: 2rem;   
+            width: 50%;
+        }
+             p{
+            font-size: 0.8rem; 
+            margin-top: 0.5rem;
+        }
+        .what-else-we-offer-item h3{
+            font-size: 0.8rem;
+        }
+
+        .what-else-we-offer-item {
+            margin-bottom: 0.5rem;
+        }
     }
 </style>

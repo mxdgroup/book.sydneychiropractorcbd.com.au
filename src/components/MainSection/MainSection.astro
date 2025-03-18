@@ -9,18 +9,21 @@ import Ratings from "../reusable/Ratings.astro";
 ---
 <section class="main-section">
     <UnderlineHeader text="A quick walkthrough" />
-    <div style="width:40%">
-    <YoutubeVideo videoId="KehQPtPov_0" fullWidth/>
-
+    <div class="video-container">
+        <YoutubeVideo videoId="KehQPtPov_0" fullWidth/>
     </div>
-    <BookAnAppotiment />
+    <div class="book-an-appointment-container">
+        <BookAnAppotiment />
+    </div>
     <UnderlineHeader text="What out clients say"/>
-    <span style="font-weight: 600; font-size: 13px; color: rgb(74, 74, 74); background-color: rgba(0, 0, 0, 0); width:20%; text-align: center;">
+    <span id="client-testimonials-text">
         Join So Many of Our Satisfied Clients Find out why our clients keep coming back.
     </span>
     <Reviews />
     <Ratings blackText />
-    <PrimaryButton text="Call us to book an appointment" href="tel:0280597743"/>
+    <div class="book-an-appointment-container">
+        <PrimaryButton text="Call us to book an appointment" href="tel:0280597743" centerText={true}/>
+    </div>
     <Team />
     <UnderlineHeader text="How can you find us?" />
     <div class="map-container">
@@ -38,6 +41,10 @@ import Ratings from "../reusable/Ratings.astro";
         align-items: center;
         justify-content: center;
         gap: 2rem;
+        overflow-x: hidden;
+    }
+    .book-an-appointment-container {
+        max-width: 60%;
     }
     .map-container {
         width: 70%;
@@ -61,5 +68,41 @@ import Ratings from "../reusable/Ratings.astro";
         background-color: rgba(0, 0, 0, 0.5);
         height: 100%;
         width: 100%;
+    }
+
+    .video-container {
+        width: 40%;
+    }
+
+    #client-testimonials-text {
+        font-weight: 600; 
+        font-size: 13px; 
+        color: rgb(74, 74, 74); 
+        background-color: rgba(0, 0, 0, 0); 
+        width:20%; 
+        text-align: center;   
+    }
+    @media (max-width: 480px) {
+        #client-testimonials-text {
+            width: 80%;
+        }
+        .map-container {
+            width: 80%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .map-container h1{
+            font-size: 1.5rem;
+        }
+        .map-container p{
+            font-size: 0.6rem;
+        }
+        .video-container {
+            width: 80%;
+        }
     }
 </style>

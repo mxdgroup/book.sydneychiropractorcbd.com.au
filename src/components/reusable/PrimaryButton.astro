@@ -2,17 +2,18 @@
 interface Props {
     text: string;
     href?: string;
+    centerText?: boolean;
 }
 
-const { text, href } = Astro.props;
+const { text, href, centerText } = Astro.props;
 ---
 {
     href ? (
-        <a href="tel:0280597743" target="_blank" class="primary-button">
+        <a href="tel:0280597743" target="_blank" class="primary-button" style={centerText ? "text-align: center;" : ""}>
             {text}
         </a>
     ) : (
-        <button class="primary-button">
+        <button class="primary-button" style={centerText ? "text-align: center;" : ""}>
             {text}
         </button>
     )
@@ -35,5 +36,12 @@ const { text, href } = Astro.props;
     }
     .primary-button:hover {
         background: rgb(181, 48, 94);
+    }
+
+    @media (max-width: 480px) {
+        .primary-button {
+            font-size: 0.8rem;
+            width: 100%;
+        }
     }
 </style>
