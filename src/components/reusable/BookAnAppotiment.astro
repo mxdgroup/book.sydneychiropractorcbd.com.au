@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import personAvatar from '/public/avatars/person.png';
 ---
 <div class="book-an-appointment-container">
     <div class="book-an-appointment-header">
-        <img src="/person.png" alt="person" />
+        <Image src={personAvatar} alt="person" />
         <h1>Book an appointment</h1>    
     </div>
     <div class="button-container">

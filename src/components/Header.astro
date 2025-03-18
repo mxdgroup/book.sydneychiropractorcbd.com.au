@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import clinicLogo from '/public/logo/clinic27.webp';
 import PrimaryButton from './reusable/PrimaryButton.astro';
 ---
 <header class="header">
   <div class="container">
       <div class="header-content">
-      <img src="/clinic27.webp"/>
+      <Image src={clinicLogo} alt="Clinic Logo" loading="eager"/>
       <PrimaryButton text="Give Us a Call (02) 8059 7743" href="tel:0280597743" />
     </div>
   </div>

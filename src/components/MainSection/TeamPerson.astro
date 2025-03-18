@@ -1,13 +1,14 @@
----
+--- 
+import { Image } from 'astro:assets';
 interface TeamPerson {
     name: string;
     role: string;
-    image: string;
+    image: any;
 }
 const { person } = Astro.props;
 ---
 <div class="team-person">
-    <img src={person.image} alt={person.name} class="team-person-image" />
+    <Image src={person.image} alt={person.name} class="team-person-image" />
     <p class="team-person-name">{person.name}</p>
     <p class="team-person-title">{person.role}</p>
 </div>

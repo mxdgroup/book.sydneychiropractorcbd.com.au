@@ -1,11 +1,15 @@
 ---
 import ReviewCard from "../reusable/ReviewCard.astro";
+import lieneAvatar from '/public/avatars/review/liene.png';
+import seanAvatar from '/public/avatars/review/sean.png';
+import shantelAvatar from '/public/avatars/review/shantel.png';
+import jessicaAvatar from '/public/avatars/review/jes.png';
 ---
 <div class="reviews-container">
   <div class="reviews-grid">
     <ReviewCard 
       name="Liene Indriksone"
-      avatarSrc="/images/avatars/liene.jpg"
+      avatarSrc={lieneAvatar}
       reviewText="I've had only great experiences going to the chiropractor here. The team are friendly, welcoming and with a sense of humour! Angus is a great chiropractor who always makes me feel at ease and listens to any concerns I have. Thank you for being so wonderful!"
     />
     
@@ -18,7 +22,7 @@ import ReviewCard from "../reusable/ReviewCard.astro";
     
     <ReviewCard 
       name="Jessica Block"
-      avatarSrc="/images/avatars/jessica.jpg"
+      avatarSrc={jessicaAvatar}
       reviewText="Hooman's treatment has made a world of difference to me - hips and lower back pain have been dramatically reduced through a slow, careful, sustained series of treatments over the course of four weeks. I can highly recommend him and Clinic 27."
     />
     
@@ -31,13 +35,13 @@ import ReviewCard from "../reusable/ReviewCard.astro";
     
     <ReviewCard 
       name="Sean Melbourne"
-      avatarSrc="/images/avatars/sean.jpg"
+      avatarSrc={seanAvatar}
       reviewText="This is by far the most impactful chiropractic treatment I have had. It's very thorough and has a long lasting effect. Hooman and his team are very skilled at it. I highly recommend them!"
     />
     
     <ReviewCard 
       name="Shantel Gabriele"
-      avatarSrc="/images/avatars/shantel.jpg"
+      avatarSrc={shantelAvatar}
       reviewText="I have been seeing Dr Angus Phelps since 2021. Initially it was to help with my posture. After a few adjustments I noticed a significant improvement and I've continued with maintenance adjustments. When providing treatment I found Dr Angus to be very professional, knowledgeable and caring. He listens carefully to understand what the issue is and provides treatment accordingly. I feel confident in his care and I would highly recommend him and the whole team."
     />
   </div>

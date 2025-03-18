@@ -1,7 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 interface Props {
   name: string;
-  avatarSrc?: string;
+  avatarSrc?: any;
   avatarInitial?: string;
   avatarColor?: string;
   rating: number;
@@ -15,7 +16,7 @@ const { name, avatarSrc, avatarInitial, avatarColor = "#6a3db3", rating = 5, rev
   <div class="review-header">
     {avatarSrc ? (
       <div class="avatar">
-        <img src={avatarSrc} alt={`${name}'s avatar`} />
+        <Image src={avatarSrc} alt={`${name}'s avatar`} />
       </div>
     ) : (
       <div class="avatar-initial" style={`background-color: ${avatarColor};`}>
