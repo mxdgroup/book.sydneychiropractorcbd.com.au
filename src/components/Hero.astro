@@ -3,14 +3,12 @@ import Ratings from "./reusable/Ratings.astro";
 ---
 
 <section class="hero">
-  <div class="overlay"></div>
   <div class="container">
     <div class="hero-content">
       <h1>
         Achieve Optimal Health, Happiness<br />
         and Your Full Human Potential
       </h1>
-      <Ratings />
 
       <ul class="features">
         <li>• Over 30 years of chiropractic experience</li>
@@ -18,31 +16,27 @@ import Ratings from "./reusable/Ratings.astro";
         <li>• Long-term solution to pain and discomfort with Advanced Biostructural Correction</li>
       </ul>
 
-      <a href="tel:0280597743" target="_blank" class="cta-button">
+      <a href="tel:0280597743" class="cta-button">
         Call Us to Take the First Step
       </a>
     </div>
   </div>
 </section>
 
-<style>
-  .hero {
-    position: relative;
-    min-height: 20vh;
-    background-image: url("/hero_bg.png");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 1rem 0;
+<style is:inline>
+  :root {
+    --hero-bg-image: url("/hero_bg.webp");
   }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
+  .hero {
+    position: relative;
+    height:fit-content;
+    color: white;
+    padding: 1rem 0;
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
   }
 
   .hero-content {
@@ -129,4 +123,5 @@ import Ratings from "./reusable/Ratings.astro";
       font-size: 0.8rem;
     }
   }
+
 </style>
