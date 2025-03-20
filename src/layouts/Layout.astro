@@ -15,11 +15,45 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<!-- preload image -->
 		<link rel="preload" href="/src/assets/hero_bg.webp" as="image" />
 		<link rel="preload" href="/src/assets/logo/clinic27.webp" as="image" />
 		<link rel="preload" href="/src/assets/logo/google.webp" as="image" />
+		<!-- Preload critical fonts -->
+		<link rel="preload" href="/fonts/inter-regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/inter-medium.woff" as="font" type="font/woff" crossorigin />
+		<!-- Inline critical font CSS -->
+		<style>
+			/* Self-hosted font files with font-display: swap */
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: local('Inter Regular'), local('Inter-Regular'), url('/fonts/inter-regular.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 500;
+				font-display: swap;
+				src: local('Inter Medium'), local('Inter-Medium'), url('/fonts/inter-medium.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				src: local('Inter SemiBold'), local('Inter-SemiBold'), url('/fonts/inter-semibold.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				src: local('Inter Bold'), local('Inter-Bold'), url('/fonts/inter-bold.woff') format('woff');
+			}
+		</style>
 	</head>
 	<body>
 		<slot />
