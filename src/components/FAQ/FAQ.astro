@@ -56,7 +56,9 @@ const faqItems: FAQItem[] = [
             ))}
         </div>
     </div>
-    <BookAnAppotiment />
+    <div id="book-an-appointment-container">
+        <BookAnAppotiment />
+    </div>
 </section>
 
 <script is:inline>
@@ -111,6 +113,7 @@ const faqItems: FAQItem[] = [
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .faq-container {
         width: 100%;
@@ -125,6 +128,14 @@ const faqItems: FAQItem[] = [
         width: 50%;
     }
 
+    #book-an-appointment-container{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     @media (max-width: 768px) {
         .faq-container {
             flex-direction: column;
@@ -136,8 +147,8 @@ const faqItems: FAQItem[] = [
         .faq-container-right {
             width: 100%;
         }
-        
-        
-        
+        #book-an-appointment-container{
+            width: 100%;
+        }
     }
 </style>
