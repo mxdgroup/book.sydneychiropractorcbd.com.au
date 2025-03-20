@@ -16,13 +16,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-		<link rel="preload" href="/hero_bg.webp" as="image" />
-		<link rel="preload" href="/logo/clinic27.webp" as="image" />
-		<link rel="preload" href="/logo/google.webp" as="image" />
-		<link rel="preload" href="/logo/ahm.png" as="image" />
-		<link rel="preload" href="/logo/asr-logo.png" as="image" />
-		<link rel="preload" href="/logo/asr-logo.png" as="image" />
-		<link rel="preload" href="/logo/medibank.png.webp" as="image" />
+		<!-- preload image -->
+		<link rel="preload" href="/src/assets/hero_bg.webp" as="image" />
+		<link rel="preload" href="/src/assets/logo/clinic27.webp" as="image" />
+		<link rel="preload" href="/src/assets/logo/google.webp" as="image" />
 	</head>
 	<body>
 		<slot />

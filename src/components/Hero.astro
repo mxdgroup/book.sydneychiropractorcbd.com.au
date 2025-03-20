@@ -3,20 +3,21 @@ import Ratings from "./reusable/Ratings.astro";
 import { Image } from "astro:assets";
 
 // Import the image directly to enable Astro's image optimization
-import heroBackground from "/public/hero_bg.webp";
+import heroBackground from "../assets/hero_bg.webp";
 
 ---
 
 <section class="hero">
-  <!-- <Image 
-    src="/hero_bg.webp" 
+  <Image 
+    src={heroBackground} 
     alt="Clinic background" 
     class="hero-background" 
     width="1920" 
     height="1080"
     loading="eager"
     decoding="async"
-  /> -->
+    fetchpriority="high"
+  />
   <div class="overlay"></div>
   <div class="container">
     <div class="hero-content">
